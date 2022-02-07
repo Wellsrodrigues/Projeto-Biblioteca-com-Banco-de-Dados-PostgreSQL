@@ -1,0 +1,31 @@
+
+create table cliente(
+	id serial not null,
+	nome text not null,
+	cpf text not null,
+	telefone text,
+	primary key(id)
+);
+
+create table livro(
+	cod serial not null,
+	titulo text,
+	author text,
+	estado text,
+	disponibilidade text,
+	primary key(cod)
+);
+
+select *from cliente order by id;
+
+drop table cliente;
+
+select *from livro;
+
+delete from cliente;
+
+insert into cliente (nome, cpf, telefone) values ('Roberto', '243.542.556-45', '(99) 96743-3424');
+
+select *from livro where cod = 1;
+
+update livro set author = 'A. Frank' where cod=1;
